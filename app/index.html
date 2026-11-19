@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vice City Trophy Ledger — GTA 6 Trophy Guide &amp; Tracker</title>
+<meta name="description" content="An offline guide and tracker for all 55 Grand Theft Auto VI PlayStation 5 trophies: checklist, roadmap to the platinum, missables, and a cited guide for every trophy.">
+<link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <span class="brand-mark" aria-hidden="true">VC</span>
+    <div>
+      <h1>Vice City Trophy Ledger</h1>
+      <p class="tagline">Every GTA 6 trophy, tracked. Offline, free, open source.</p>
+    </div>
+  </div>
+  <div class="progress-wrap" id="progressWrap">
+    <div class="progress-numbers"><strong id="earnedCount">0</strong> / <span id="totalCount">55</span> earned
+      <span class="progress-pct" id="progressPct">0%</span></div>
+    <div class="progress-bar" role="progressbar" aria-label="Trophies earned" aria-valuemin="0" aria-valuemax="55" aria-valuenow="0" id="progressBar"><span id="progressFill"></span></div>
+    <div class="grade-counts" id="gradeCounts"></div>
+  </div>
+</header>
+
+<nav class="tabs" aria-label="Views">
+  <a href="#/checklist" data-view="checklist" class="tab">Checklist</a>
+  <a href="#/roadmap" data-view="roadmap" class="tab">Roadmap to Platinum</a>
+  <a href="#/missables" data-view="missables" class="tab">Missables <span class="pill" id="missablePill">14</span></a>
+  <a href="#/guide" data-view="guide" class="tab">Guides</a>
+</nav>
+
+<main id="main">
+  <section class="toolbar" id="toolbar">
+    <label class="search-box">Search trophies
+      <input type="search" id="searchInput" placeholder="Type a name, e.g. stunts, bank, fishing…" autocomplete="off">
+    </label>
+    <fieldset class="kind-filters" id="kindFilters" aria-label="Filter by kind">
+      <legend>Kind</legend>
+      <label><input type="radio" name="kind" value="all" checked> All</label>
+      <label><input type="radio" name="kind" value="story"> Story</label>
+      <label><input type="radio" name="kind" value="missable"> Missable</label>
+      <label><input type="radio" name="kind" value="collectibles"> Collectibles</label>
+      <label><input type="radio" name="kind" value="activities"> Activities</label>
+      <label><input type="radio" name="kind" value="online"> Online</label>
+    </fieldset>
+    <fieldset class="grade-filters" id="gradeFilters" aria-label="Filter by grade">
+      <legend>Grade</legend>
+      <label><input type="radio" name="grade" value="all" checked> All</label>
+      <label><input type="radio" name="grade" value="Platinum"> Platinum</label>
+      <label><input type="radio" name="grade" value="Gold"> Gold</label>
+      <label><input type="radio" name="grade" value="Silver"> Silver</label>
+      <label><input type="radio" name="grade" value="Bronze"> Bronze</label>
+    </fieldset>
+    <label class="toggle"><input type="checkbox" id="spoilerToggle"> <span>Hide story spoilers until earned</span></label>
+    <label class="toggle"><input type="checkbox" id="earnedOnlyToggle"> <span>Show earned only</span></label>
+    <div class="save-actions">
+      <button type="button" id="exportBtn">Export progress</button>
+      <button type="button" id="importBtn">Import progress</button>
+      <input type="file" id="importFile" accept="application/json,.json" hidden>
+      <button type="button" id="resetBtn">Reset</button>
+    </div>
+  </section>
+
+  <p class="list-meta" id="listMeta"></p>
+  <section id="view" aria-live="polite"></section>
+
+  <section class="about" id="aboutBox">
+    <h2>How this guide was built</h2>
+    <p>Names, descriptions, grades and hidden flags are the official PlayStation 5 list as published on
+      <a href="https://www.exophase.com/game/grand-theft-auto-vi-psn/trophies/">Exophase</a> and
+      <a href="https://psnprofiles.com/trophies/43531-grand-theft-auto-vi">PSNProfiles</a> (55 trophies:
+      1 platinum, 2 gold, 6 silver, 46 bronze; 28 hidden until earned). Every guide below is written in our own
+      words from those official descriptions, and each one names its sources. Where a place or step is not pinned
+      down by the official description, the guide says so plainly instead of inventing it. No Rockstar logo or
+      official artwork is used anywhere in this app, and it makes no network requests at all — it works with the
+      network off. Demo mode: opening the app with <code>?demo=1</code> seeds 13 earned trophies so the tracker
+      can be previewed; your own saved progress is never touched by it.</p>
+    <p class="fineprint">Grand Theft Auto and GTA are trademarks of Take-Two Interactive. This is an unofficial
+      fan-made guide, not affiliated with Rockstar Games. Trophy data: Exophase / PSNProfiles, November 2026.</p>
+  </section>
+</main>
+
+<footer class="footer">
+  <p>Vice City Trophy Ledger — an offline GTA 6 trophy guide &amp; tracker. Progress is saved only in this browser (localStorage).</p>
+</footer>
+
+<script type="module" src="./js/main.js"></script>
+</body>
+</html>
